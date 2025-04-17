@@ -28,5 +28,6 @@ Final Project Report
   3. run `git clone https://github.com/<username>/<forked_repo>` to copy the repo from Github to your local computer
   
 ### Make
-  4. Run `make final_report.html` in the terminal while in the project directory to generate the complete final report
+  3. Run `make install` in the terminal while in the project's root directory to install the packages from renv
+  4. Run `make final_report.html` in the terminal while in the project's root directory to generate the complete final report
   5. Run `make clean` to remove contents of the output folder and `final_report.html`

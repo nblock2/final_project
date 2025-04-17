@@ -48,3 +48,4 @@ data <- data %>%
                   ifelse(id_registry==TRUE|id_mail==TRUE|id_records==TRUE, "remote", "other")))
 
 saveRDS(data, here::here("output/ASD_clean.RDS"))
+
