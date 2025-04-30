@@ -29,10 +29,6 @@ PROJECTFILES = final_report.Rmd code/data_cleaning.R code/graph.R code/regressio
 RENVFILES = renv.lock renv/activate.R renv/settings.json
 
 
-final: $(PROJECTFILES) $(RENVFILES)
-	docker build -t nblock2/final .
-	touch $@
 
-
-final_report/final_report.html: final
-	docker run -v /"$$(pwd)/final_report":/project/final_report final
+final_report/final_report.html:
+	docker run -v /"$$(pwd)/final_report":/project/final_report nblock2/final

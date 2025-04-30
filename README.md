@@ -38,3 +38,8 @@ Final Project Report
     `docker run -v "$$(pwd)/final_report":/project/final_report final`
   6. Save the Makefile after editing
   7. Run `make final_report/final_report.html` in the terminal while in the project's root directory to generate the complete final report through the docker image
+  
+#### Additional Information
+  The link to the docker image in dockerhub is given below:
+  https://hub.docker.com/repository/docker/nblock2/final/general
+  
