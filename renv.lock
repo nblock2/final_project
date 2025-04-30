@@ -580,7 +580,7 @@
     },
     "broom.helpers": {
       "Package": "broom.helpers",
-      "Version": "1.20.0",
+      "Version": "1.21.0",
       "Source": "Repository",
       "Title": "Helpers for Model Coefficients Tibbles",
       "Authors@R": "c( person(\"Joseph\", \"Larmarange\", , \"joseph@larmarange.net\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7097-700X\")), person(\"Daniel D.\", \"Sjoberg\", , \"danield.sjoberg@gmail.com\", role = \"aut\", comment = c(ORCID = \"0000-0003-0862-2018\")) )",
@@ -656,7 +656,8 @@
         "survival",
         "testthat (>= 3.0.0)",
         "tidycmprsk",
-        "VGAM"
+        "VGAM",
+        "svyVGAM"
       ],
       "VignetteBuilder": "knitr",
       "RdMacros": "lifecycle",

@@ -19,4 +19,19 @@ output/graph.RDS: code/graph.R output/ASD_clean.RDS
 
 .PHONY: clean
 clean:
-	rm -r output && rm *.html
+	rm -r final_report && rm -r output
+	
+#Docker rules
+
+# files that if changed, we would want to rebuild image
+PROJECTFILES = final_report.Rmd code/data_cleaning.R code/graph.R code/regression.R code/render_report.R Makefile
+RENVFILES = renv.lock renv/activate.R renv/settings.json
+
+
+final: $(PROJECTFILES) $(RENVFILES)
+	docker build -t nblock2/final .
+	touch $@
+
+
+final_report/final_report.html: final
+	docker run -v /"$$(pwd)/final_report":/project/final_report final
