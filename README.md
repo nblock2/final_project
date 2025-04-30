@@ -29,5 +29,12 @@ Final Project Report
   
 ### Make
   3. Run `make install` in the terminal while in the project's root directory to install the packages from renv
-  4. Run `make final_report.html` in the terminal while in the project's root directory to generate the complete final report
-  5. Run `make clean` to remove contents of the output folder and `final_report.html`
+
+#### For Windows
+  4. Run `make final_report/final_report.html` in the terminal while in the project's root directory to generate the complete final report through the docker image
+
+#### For Mac
+  5. Go to the make file, delete the last line (line 38), and replace it with the following:
+    `docker run -v "$$(pwd)/final_report":/project/final_report final
+  6. Save the Makefile`after editing
+  7. Run `make final_report/final_report.html` in the terminal while in the project's root directory to generate the complete final report through the docker image

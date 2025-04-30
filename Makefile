@@ -21,6 +21,7 @@ output/graph.RDS: code/graph.R output/ASD_clean.RDS
 clean:
 	rm -r final_report && rm -r output
 	
+	
 #Docker rules
 
 # files that if changed, we would want to rebuild image
